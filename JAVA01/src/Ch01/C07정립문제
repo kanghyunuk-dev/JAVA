@@ -1,0 +1,29 @@
+	확인 문제1
+
+	정수타입 
+	1byte : byte
+	2byte : char / short
+	4byte : int(기본자료형) 
+	8byte : long 
+
+	실수타입
+	4byte : float 
+	8byte : double(기본자료형)
+
+	논리타입
+	1byte : boolean 
+
+
+	확인문제2
+	맞는 코드인지 틀린 코드인지 확인 
+	byte var = 200;							( x 	) // byte : -128 ~ 127
+	char var='AB';							( x 	) // char : 문자하나
+	char var=65;							( o  )	 
+	long var=50000000000;					( x 	) // int : -21억 ~ 21억 , long : L,l 붙여주기	
+	float var = 3.14;						( x 	) // 자동형변환 -> double 공간의 값을 float 으로 넣어주려 함 -> 불가
+	double var = 100.0;						( o  )	  
+	String var = "나의직업은 "개발자" 입니다.";	( x  )    // "" 안에 "" 불가 
+	boolean var = 0;						( x 	) // 자바에서는 boolean 숫자로 담기 불가
+	int v2 = 1e2; 							( x  )    // 1.0 x 10^2  - 1e2 : double , int v2 형이 안맞음
+	float = 1e2f;	 						( x 	) // 
+	
