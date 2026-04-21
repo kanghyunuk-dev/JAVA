@@ -12,16 +12,18 @@ public class C03Scanner {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("이름을 입력하세요.");
-		String str1 = sc.nextLine();
+		System.out.print("이름을 입력하세요 : ");
+		String name = sc.next();
 		
-		System.out.println("홍길동 님의 나이를 입력하세요?");
-		String str2 = sc.nextLine();
+		System.out.printf("%s 님의 나이를 입력하세요?", name);
+		int age = sc.nextInt();
 		
-		System.out.println("홍길동 님의 주소를 입력하세요?");
-		String str3 = sc.nextLine();
+		System.out.printf("%s 님의 주소를 입력하세요?", name);
+		sc.nextLine();
+		String addr = sc.nextLine();
 		
-		System.out.println(str1 + " 님의 나이는 " + str2 + "세 주소는 "+ str3 + " 입니다.");
+//		System.out.println(name + " 님의 나이는 " + age + "세 주소는 "+ addr + " 입니다.");
+		System.out.printf("%s 님의 나이는 %d세 주소는 %s 입니다.", name,age,addr);
 
 	}
 
