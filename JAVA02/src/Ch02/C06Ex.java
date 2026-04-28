@@ -15,16 +15,23 @@ class Profile
 		
 	}
 	// 2)모든 인자 받는 생성자 삽입
-	Profile(String str) {
-		String [] result = str.split(","); 
-		this.name = result[0];
-		this.addr = result[1];
-		this.job = result[2];
-		this.major = result[3];
+	public Profile(String name, String addr, String job, String major) {
+		super();
+		this.name = name;
+		this.addr = addr;
+		this.job = job;
+		this.major = major;
 	}
 	// 3)"홍길동,대구,프로그래머,컴퓨터공학" 을 받아 ,를 기준으로 잘라서 각 멤버에 저장
 //	String str = "홍길동,대구,프로그래머,컴퓨터공학";
 //	String [] result = str.split(",");
+	Profile(String arg) {
+		String [] params = arg.split(",");
+		this.name = params[0];
+		this.addr = params[1];
+		this.job = params[2];
+		this.major = params[3];
+	}
 	
 	
 	
@@ -67,17 +74,18 @@ class Profile
 	// findstr의 문자열이 각멤버인 name,addr,job,major 중 하나라도 포함되어 있으면 true 리턴
 	// 아니면 false 리턴
 	boolean isContain(String findstr) {
-		if(this.name.contains(findstr)) {
-			return true;
-		} else if(this.addr.contains(findstr)) {
-			return true;
-		} else if(this.job.contains(findstr)) {
-			return true;
-		} else if(this.major.contains(findstr)) {
-			return true;
-		} else {
-			return false;
-		}
+//		if(this.name.contains(findstr)) {
+//			return true;
+//		} else if(this.addr.contains(findstr)) {
+//			return true;
+//		} else if(this.job.contains(findstr)) {
+//			return true;
+//		} else if(this.major.contains(findstr)) {
+//			return true;
+//		} else {
+//			return false;
+//		}
+		return this.name.contains(findstr) || this.addr.contains(findstr) || this.job.contains(findstr) || this.major.contains(findstr);
 	}
 	
 	// 4) boolean isEquals(String str) {} 완성하기
@@ -86,24 +94,17 @@ class Profile
 	//아니면 false 를 리턴
 	boolean isEquals(String str) {
 		String [] all = str.split(",");
-		if(this.name.equals(all[0])) {
-			return true;
-		} else if(this.addr.equals(all[1])) {
-			return true;
-		} else if(this.job.equals(all[2])) {
-			return true;
-		} else if(this.major.equals(all[3])) {
-			return true;
-		}else {
-			return false;
-		} 
+//		if(
+//			this.name.equals(all[0]) && this.addr.equals(all[1]) && this.job.equals(all[2]) && this.major.equals(all[3])
+//		) return true;
+//		else return false;
 		
+		return this.name.equals(all[0]) && this.addr.equals(all[1]) && this.job.equals(all[2]) && this.major.equals(all[3]);
 	}
 	
 }
 
 public class C06Ex {
-
 	public static void main(String[] args) {
 		Profile hong = new Profile("홍길동,대구,프로그래머,컴퓨터공학");
 		System.out.println(hong.toString());
