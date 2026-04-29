@@ -19,28 +19,28 @@ package Ch05;
 //3) 함수 본문 변경? o  
 //4) 목적 : 다형성
 
-class Animal {
-	void sound() {System.out.println("소리낸다!");}
-}
-class Dog extends Animal {
-	// 오버라이딩
-	void sound() {System.out.println("멍멍");};
-}
-class Cat extends Animal {
-	@Override
-	void sound() {
-		System.out.println("야용 소리낸다!!");
-	}
-}
-
-public class C03MethodOverriding {
-
-	public static void main(String[] args) {
-		Dog tori = new Dog();
-		tori.sound();
-		System.out.println("-----------------");
-		Cat navi = new Cat();
-		navi.sound();
-	}
-
-}
+//class Animal {
+//	void sound() {System.out.println("소리낸다!");}
+//}
+//class Dog extends Animal {
+//	// 오버라이딩
+//	void sound() {System.out.println("멍멍");};
+//}
+//class Cat extends Animal {
+//	@Override
+//	void sound() {
+//		System.out.println("야용 소리낸다!!");
+//	}
+//}
+//
+//public class C03MethodOverriding {
+//
+//	public static void main(String[] args) {
+//		Dog tori = new Dog();
+//		tori.sound();
+//		System.out.println("-----------------");
+//		Cat navi = new Cat();
+//		navi.sound();
+//	}
+//
+//}

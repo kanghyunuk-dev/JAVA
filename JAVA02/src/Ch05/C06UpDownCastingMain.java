@@ -48,6 +48,7 @@ public class C06UpDownCastingMain {
 		Sub down = (Sub)ob4; // ob4는 Super 이다 -> 있던 객체 -> 있는 공간에 값을 넣음 -> 오류x 
 		down.n1 = 100;
 		down.n2 = 200;
+		
 	}
 
 }
